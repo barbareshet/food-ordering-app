@@ -3,3 +3,15 @@
 @tailwind utilities;
 
 
+.hero{
+    @apply grid;
+    grid-template-columns: .4fr .6fr;
+    min-height: 450px;
+}
+.hero .hero-text{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
