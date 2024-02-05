@@ -7,7 +7,7 @@ import SectionHeaders from "@/components/layouts/SectionHeaders";
 export default function Home() {
   return (
     <>
-        <Header/>
+
         <Hero/>
         <HomeMenu/>
         <section className="about my-16">
