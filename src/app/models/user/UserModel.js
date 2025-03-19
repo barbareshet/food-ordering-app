@@ -1,4 +1,4 @@
-import {Schema} from "mongoose";
+import {models, Schema} from "mongoose";
 
 const UserModel = new Schema({
     email: {
@@ -11,8 +11,9 @@ const UserModel = new Schema({
         require: true,
         validate: pass => {
             if (!pass?.length || !pass?.length > 5){
-
+                new Error('Password must have at least 5 characters')
             }
         }
     }
 })
+export const User = models?.User || model('User', UserModel);
